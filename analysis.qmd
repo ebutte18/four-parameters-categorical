@@ -2,5 +2,36 @@
 title: "Four Parameters Categorical"
 author: "Eric Butte"
 format: html
+execute: 
+  echo: false
 ---
 
+
+```{r}
+#| message: false
+#| warning: false
+library(tidyverse)
+library(primer.data)
+library(tidymodels)
+library(broom)
+library(marginaleffects)
+```
+
+
+$$\hat{Y} = \beta_0 + \beta_1 X_1 + \beta_2 X_2 + \beta_3 X_3 + \beta_4 X_4$$
+
+
+$$
+\begin{cases}
+\hat{Y}_{\text{Clinton}} = 0.4554 - 0.2554 \times \text{sexMale} \\
+\hat{Y}_{\text{Perot}} = -0.8519 + 0.4202 \times \text{sexMale}
+\end{cases}
+$$
+
+
+
+
+
+
+
+The 1992 Presidential election was historic due to a third party candidate, Ross Perot, receiving 19% of the popular vote. The data source used will be a poll used since the 1940s examining America's attitude post elections. Was sex tied to the candidate he or she voted for? A potential weakness is that I don't include enough covariates. Being able to analyze voter preference of different genders is important for a political candidate to attempt to win the presidency. 
